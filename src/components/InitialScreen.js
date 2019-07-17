@@ -12,7 +12,7 @@ export default function InitialScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: 'tomato',
     alignItems: 'center',
     justifyContent: 'center',
   },
