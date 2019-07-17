@@ -12,7 +12,7 @@ export default class Header extends Component{
 }
 const styles=StyleSheet.create({
     mainContainer:{
-        backgroundColor:'blue',
+        backgroundColor:'#650CCA',
         paddingTop:50,
         flex:1
     },
