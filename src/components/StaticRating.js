@@ -7,7 +7,8 @@ export default class StaticRating extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ratingValue: 1
+      ratingValue: 1,
+      ratingCount:0
     };
   } 
 
@@ -20,7 +21,8 @@ export default class StaticRating extends React.Component {
 
   render() {
     return (
-      <View style={{flex:1}}>
+      <View style={{flex:1,flexDirection:'row'}}>
+        <View style={{flex:1}}>
            <StarRating 
               disabled={false}
               emptyStar={'ios-star-outline'}
@@ -34,7 +36,9 @@ export default class StaticRating extends React.Component {
               fullStarColor={'#F5A21A'}
               />
               <Text style={{padding:10}}>{this.state.ratingValue}</Text>
-      </View>
+          </View>
+          <View style={{flex:1}}><Text style={{fontSize:20,color:'#f5b041',alignContent:'center'}}>({this.state.ratingCount})</Text></View>
+        </View>
     );
   }
 }
