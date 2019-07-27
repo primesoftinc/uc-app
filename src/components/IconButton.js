@@ -71,7 +71,7 @@ render(){
       (
  <SocialIcon
   type={icon} button={true} loading={isLoading}disabled={isDisabled}  onPress= {this.handle} title={title}
-  light={false,light} style={[radius1[radius],styles.container,sizes[size],style]} 
+  light={[false,light]} style={[radius1[radius],styles.container,sizes[size],style]} 
 /> ) : <Text> </Text>       }
 
 {
@@ -79,7 +79,7 @@ render(){
     (
 <SocialIcon
   type={icon} button={true} disabled={isDisabled} onPress= {this.handleDisable} title={title}
-  light={false,light} style={[radius1[radius],styles.container,sizes[size],style]} 
+  light={[false,light] }style={[radius1[radius],styles.container,sizes[size],style]} 
 /> ): <Text> </Text>
         }
   
