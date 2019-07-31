@@ -1,6 +1,7 @@
 import * as React from 'react';
 import StarRating from 'react-native-star-rating';
 import {View, StyleSheet } from 'react-native';
+import { SocialIcon } from 'react-native-elements'
 /* contains 5 stars for rating*/ 
 
 export default class DynamicRating extends React.Component {
@@ -33,9 +34,17 @@ export default class DynamicRating extends React.Component {
               selectedStar={(rating) => this.onStarRatingPress(rating)}
               fullStarColor={'#F5A21A'}
               />
-
+        <SocialIcon
+          title='Sign In With Google'
+          button
+          type='google'
+        />
+        <SocialIcon
+          title='Sign In With Facebook'
+          button
+          type='facebook'
+        />
       </View>
     );
   }
 }
-
