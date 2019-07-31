@@ -1,18 +1,28 @@
 import React from 'react'
 import { Text, View, StyleSheet,ScrollView,Platform, UIManager,Image} from 'react-native';
-
-import SingleCard from './SingleCard'
+import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
+import MyAppointmentCard from './MyAppointmentCard'
 import { Card } from 'react-native-elements';
-import { Table, Row, Rows } from 'react-native-table-component';
+
 export default class AppointmentData extends React.Component {
   constructor() {
     super();
  
-    this.state = { expanded: false ,
-      
-      tableData: [
-        ['Address:','RoadNo-120,shaghal street,kakinada'] ],
-        widthArr: [65, 200]
+    this.state = {
+      doctorTitle: ['Hospital :', 'Address :', 'DoctorName :', 'Specialization :'],
+      doctorData: [
+        ['Apollo Hospitals'],
+        ['Roadno-12,saghal Sreet,Kakinada'],
+        ['Dr.Rajendra Prasad'],
+        ['Neuro surgeon']
+      ],
+      patientTitle: ['PatientName :', 'Slot :', 'Problem :', 'Medication :'],
+      patientData: [
+        ['Abdul'],
+        ['09:30 Am - 10:30 Am'],
+        ['Nreves Weakness'],
+        ['prescription']
+      ]
     }
     
     if (Platform.OS === 'android') {
@@ -26,33 +36,35 @@ export default class AppointmentData extends React.Component {
       <View style={styles.container}>
         
         <View style={{flex:1}}>
-          <SingleCard/>
+          <MyAppointmentCard/>
           </View>
        
           <View style={styles.details}>
              <View  >
              <Image
                 style={styles.image}
-                source={{uri:'https://s-media-cache-ak0.pinimg.com/originals/ee/51/39/ee5139157407967591081ee04723259a.png'
-                }}/>
+                source={require('./assets/Hospital.jpg')}/>
                  <View  style={{alignItems:'center',paddingTop:5}}>
                 <Text style={styles.textBase}>Hospital Details  </Text>
                 </View>
                 <Card style={styles.hospitalDetails}>
-                <Text style={styles.textBase}>Hospital :  <Text style={styles.textAddress}>Apollo Hospitals</Text> </Text>
-                <Text style={styles.textBase}>Address :  <Text style={styles.textAddress}>Roadno-12,saghal Sreet,Kakinada</Text> </Text>
-                <Text style={styles.textBase}> Doctor Name : <Text style={styles.textAddress}> Dr.Rajendra Prasad</Text></Text>
-                <Text style={styles.textBase}> Doctor specialization : <Text style={styles.textAddress}>Neuro surgeon</Text></Text>
+                <Table borderStyle={{borderColor: 'transparent'}} >
+          <TableWrapper style={styles.wrapper}>
+            <Col data={state.doctorTitle} style={styles.title} heightArr={[30,30,30,30]} textStyle={styles.textBase}/>
+            <Rows data={state.doctorData} flexArr={[2]} style={styles.row} textStyle={styles.textAddress}/>
+          </TableWrapper>
+        </Table>
                 </Card>
                 <View  style={{alignItems:'center',paddingTop:5}}>
                 <Text style={styles.textBase}>Patient Details  </Text>
                 </View>
                 <Card style={styles.patientDetails}>
-                <Text style={styles.textBase}> Patient Name :<Text style={styles.textAddress}> Abdul</Text></Text>
-                <Text style={styles.textBase}> Slot :  <Text style={styles.textAddress}>9:30 Am - 10:30  Am</Text></Text>
-                <Text style={styles.textBase}> Problem :  <Text style={styles.textAddress}>nerves weakness</Text></Text>
-                <Text style={styles.textBase}> Medication :<Text style={{color: 'red'}}
-                          onPress={() => LinkingIOS.openURL('http://google.com')}>Prescription</Text></Text>
+                <Table borderStyle={{borderColor: 'transparent'}} >
+          <TableWrapper style={styles.wrapper}>
+            <Col data={state.patientTitle} style={styles.title} heightArr={[30,30,30,30]} textStyle={styles.textBase}/>
+            <Rows data={state.patientData} flexArr={[2]} style={styles.row} textStyle={styles.textAddress}/>
+          </TableWrapper>
+        </Table>
                 </Card>
              </View>
           </View> 
@@ -69,7 +81,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection:'column',
     paddingTop:10,
-    height:700
+    height:800
    
   },
   image:{
@@ -82,12 +94,13 @@ const styles = StyleSheet.create({
 textBase:{
     color:'#4e38fe',
     fontStyle:'normal',
-    fontSize:15
+    fontSize:14,
+    justifyContent:'center'
 },
 textAddress:{
     color:'#5B5850',
     fontStyle:'normal',
-    fontSize:14
+    fontSize:13
 },
 details:{
   flex:2,
@@ -97,7 +110,7 @@ details:{
   borderColor:'#f2f2f2',
   borderRadius:5,
   width:325,
-  height:450,
+ 
   alignSelf:'center',
   shadowColor: "#000",
   shadowOffset: {
@@ -110,6 +123,7 @@ details:{
  
 },
 hospitalDetails:{
+  paddingTop:0,
   borderRadius:5,
   backgroundColor:'white',
   shadowColor: "#000",
@@ -133,5 +147,7 @@ patientDetails:{
     shadowRadius: 3.84,
     elevation: 5,
 },
-
+  wrapper: { flexDirection: 'row' },
+  title: { flex:2 ,height:40,  },
+  row: {  height: 30  }
 });
