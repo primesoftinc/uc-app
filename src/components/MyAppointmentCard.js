@@ -5,7 +5,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import {MaterialIcons as Direction, 
   AntDesign as Qrcode,
   MaterialCommunityIcons as Time} from '@expo/vector-icons'
-export default class CardExample extends Component { 
+export default class MyApppointmentCard extends Component { 
   constructor(props){
     super(props);
   }
