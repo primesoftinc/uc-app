@@ -39,7 +39,9 @@ export default  class StaticRating extends React.Component {
               fullStarColor={'#F5A21A'}
               />
             
-              <Text style={{fontSize:11}}>{this.state.ratingValue}</Text>
+              <Text style={{color:'#5B5850',
+          fontStyle:'normal',
+          fontSize:13}}>{this.state.ratingValue}</Text>
             </View>
         </View>
     );
