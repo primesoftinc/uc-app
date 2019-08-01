@@ -17,7 +17,7 @@ import SignUp from '../screens/SignUp'
 import Login from '../screens/Login'
 import Permissions from '../screens/Permissions'
 import Profile from '../screens/Profile'
-
+import Calender from './CalendarComponent';
 
 import StarButton from '../components/StarButton'
 import AvatarButton from '../components/AvatarButton'
@@ -112,6 +112,7 @@ const ExampleInfo = {
 
 };
 const ExampleRoutes = {
+  Calender,
     DynamicRating,
   StarButton,
   AvatarButton,
