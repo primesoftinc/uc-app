@@ -21,7 +21,7 @@ import Login from '../screens/Login'
 import Profile from '../screens/Profile'
 import Permissions from '../screens/Permissions'
 import AppoinmentScreen from '../screens/AppoinmentScreen'
-import MyButton from '../screens/MyButton'
+import MyButton from '../components/MyButton'
 
 import HospitalScreen from '../screens/HospitalsScreen'
 const AppRoutes = createStackNavigator({
@@ -30,6 +30,8 @@ const AppRoutes = createStackNavigator({
     SignUp,
     Login,
     FilterScreen,
+    MyButton,
+    AppoinmentScreen,
     Permissions,
     Profile,
     Calender,

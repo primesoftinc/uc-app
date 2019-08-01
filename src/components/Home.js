@@ -13,6 +13,8 @@ import {
 import ButtonComponent from '../components/ButtonComponent'
 import DynamicRating from '../components/DynamicRating'
 import FilterScreen from '../screens/FilterScreen';
+import MyButton from '../components/MyButton';
+
 import SignUp from '../screens/SignUp'
 import Login from '../screens/Login'
 import Permissions from '../screens/Permissions'
@@ -26,7 +28,7 @@ import DurationComponent from '../components/DurationComponent'
 import Carousel from '../components/Carousal'
 import CardButton from '../components/CardButton'
 import HospitalScreen from '../screens/HospitalsScreen'
-
+import AppoinmentScreen from '../screens/AppoinmentScreen'
 const ExampleInfo = {
   DynamicRating: {
     description: 'Render additional views around a Tab navigator',
@@ -117,6 +119,8 @@ const ExampleRoutes = {
   MultiSelectDropDown,
   HospitalScreen,
   FilterScreen,
+  MyButton,
+  AppoinmentScreen,
     DynamicRating,
   StarButton,
   AvatarButton,
