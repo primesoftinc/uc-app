@@ -12,7 +12,7 @@ import {
 
 import ButtonComponent from '../components/ButtonComponent'
 import DynamicRating from '../components/DynamicRating'
-
+import FilterScreen from '../screens/FilterScreen';
 import SignUp from '../screens/SignUp'
 import Login from '../screens/Login'
 import Permissions from '../screens/Permissions'
@@ -116,6 +116,7 @@ const ExampleRoutes = {
   Calender,
   MultiSelectDropDown,
   HospitalScreen,
+  FilterScreen,
     DynamicRating,
   StarButton,
   AvatarButton,

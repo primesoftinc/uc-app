@@ -12,7 +12,6 @@ import DurationComponent from '../components/DurationComponent'
 import Pagination from '../components/Pagination';
 import Calender from '../components/CalendarComponent';
 import CalenderWithSwipe from '../components/CalenderWithSwipe';
-
 // import SymptomForm from '../components/SymptomForm'
 import Carousel from '../components/Carousal'
 import TimePicker from '../components/TimePicker'
@@ -30,6 +29,7 @@ const AppRoutes = createStackNavigator({
     ButtonComponent,
     SignUp,
     Login,
+    FilterScreen,
     Permissions,
     Profile,
     Calender,
