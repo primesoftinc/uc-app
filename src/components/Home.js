@@ -18,7 +18,7 @@ import Login from '../screens/Login'
 import Permissions from '../screens/Permissions'
 import Profile from '../screens/Profile'
 import Calender from './CalendarComponent';
-
+import MultiSelectDropDown from '../components/MultiSelectDropDown';
 import StarButton from '../components/StarButton'
 import AvatarButton from '../components/AvatarButton'
 import DurationComponent from '../components/DurationComponent'
@@ -113,6 +113,7 @@ const ExampleInfo = {
 };
 const ExampleRoutes = {
   Calender,
+  MultiSelectDropDown,
     DynamicRating,
   StarButton,
   AvatarButton,
