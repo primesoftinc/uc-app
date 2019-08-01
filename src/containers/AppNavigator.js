@@ -33,6 +33,7 @@ const AppRoutes = createStackNavigator({
     Permissions,
     Profile,
     Calender,
+    HospitalScreen,
     MultiSelectDropDown,
    InitialScreen: {screen: InitialScreen},
 //    Button : { screen: Button },

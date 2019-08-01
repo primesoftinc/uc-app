@@ -25,6 +25,7 @@ import DurationComponent from '../components/DurationComponent'
 // import SymptomForm from '../components/SymptomForm'
 import Carousel from '../components/Carousal'
 import CardButton from '../components/CardButton'
+import HospitalScreen from '../screens/HospitalsScreen'
 
 const ExampleInfo = {
   DynamicRating: {
@@ -114,6 +115,7 @@ const ExampleInfo = {
 const ExampleRoutes = {
   Calender,
   MultiSelectDropDown,
+  HospitalScreen,
     DynamicRating,
   StarButton,
   AvatarButton,
