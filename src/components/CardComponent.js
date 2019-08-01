@@ -1,7 +1,8 @@
 import React ,{Component}from 'react';
 import {StyleSheet,Image,View,ScrollView,TouchableOpacity ,Alert} from 'react-native';
 import StaticRating from './StaticRating';
-import { Card, Text} from 'react-native-elements'
+import { Card, Text,Button} from 'react-native-elements'
+import BtnCom from './ButtonComponent'
 import { EvilIcons as Icons } from '@expo/vector-icons';
    export default class CardComponent extends Component {
     constructor(props){
@@ -9,6 +10,9 @@ import { EvilIcons as Icons } from '@expo/vector-icons';
       }
       handleCard(){
         Alert.alert("clicked")
+      }
+      timeClick = ()=>{
+        Alert.alert("redirect to Appoinment Screen")
       }
       render() { 
         const { images, place,Spec,Name} = this.props;
@@ -100,25 +104,40 @@ import { EvilIcons as Icons } from '@expo/vector-icons';
                   </View>
 
             </View>
-            <View style={{height:50,flexDirection:'row',paddingTop:15
-            ,justifyContent:'space-around'}}>
-              <View style={styles.buttonViewOutline}>
-                <Text style={styles.outLineButtonText}>09:00 A.M</Text>
-              </View>
-              <View style={styles.buttonViewOutline}>
-              <Text style={styles.outLineButtonText}>09:15 A.M</Text>              
-              </View>
-              <View style={styles.buttonViewOutline}>
-              <Text style={styles.outLineButtonText}>09:30 A.M</Text>              
-              </View>
-              <View style={styles.buttonViewOutline}>
-              <Text style={styles.outLineButtonText}>09:45 A.M</Text>              
-              </View>
+            <View style={{height:50,flexDirection:'row',paddingTop:10
+            ,justifyContent:'space-between'}}>
+              <Button type='outline' 
+              onPress={this.timeClick}
+              buttonStyle={styles.buttonViewOutline}
+                title='09:00 AM'
+                titleStyle={styles.outLineButtonText}></Button>
+               <Button type='outline' 
+               onPress={this.timeClick}
+                buttonStyle={styles.buttonViewOutline}
+                title='09:00 AM'
+                titleStyle={styles.outLineButtonText}></Button>
+               <Button type='outline' 
+                buttonStyle={styles.buttonViewOutline}
+                title='09:00 AM'
+                onPress={this.timeClick}
+                titleStyle={styles.outLineButtonText}></Button>
+               <Button type='outline' 
+              buttonStyle={styles.buttonViewOutline}
+                title='09:00 AM'
+                onPress={this.timeClick}
+                titleStyle={styles.outLineButtonText}></Button>
               </View>
               </TouchableOpacity>
           </Card>
 
-             
+             {/* <BtnCom
+             title="e"
+             width="70"
+             height="10"
+             textColor='red'
+             radius='25'
+             type='outline'
+             /> */}
              
              </ScrollView>
    
@@ -172,17 +191,14 @@ import { EvilIcons as Icons } from '@expo/vector-icons';
           fontStyle:'normal',
           fontSize:13
       },
-      buttonView:{
-       height:30,
-         width:60,borderRadius:15,
-        alignItems:'center',
-        justifyContent:'center',
-        padding:10,
-        backgroundColor:'#4e38fe',
-        paddingTop:5,
-       
-      },
       buttonViewOutline:{
+        width:71,
+        borderColor:'#4e38fe',
+        borderWidth:1,
+        height:30,
+        borderRadius:30,
+      },
+      buttonView:{
         borderColor:'#4e38fe',
         borderWidth:1,
         height:30,
@@ -193,7 +209,7 @@ import { EvilIcons as Icons } from '@expo/vector-icons';
       },
       outLineButtonText:{
         fontStyle:'normal',
-        fontSize:12,
+        fontSize:11,
         color:'#4e38fe'
       },
       buttonText:{
