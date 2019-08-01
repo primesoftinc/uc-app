@@ -1,6 +1,6 @@
-import CardComponent from './CardComponent'
 import * as React from 'react';
 import { Alert,Text, View, StyleSheet } from 'react-native';
+import Card from '../components/CardComponent'
 const images = {
     source:[
     {uri:'https://images.pexels.com/photos/1516648/pexels-photo-1516648.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'},
@@ -9,9 +9,9 @@ const images = {
     {uri:'https://s-media-cache-ak0.pinimg.com/originals/8d/1a/da/8d1adab145a2d606c85e339873b9bb0e.jpg'},
     {uri:'https://images.pexels.com/photos/48604/pexels-photo-48604.jpeg?cs=srgb&dl=desk-doctor-health-48604.jpg&fm=jpg'},
   ]};
-export default class AvatarButton extends React.Component {
+export default class CardButton extends React.Component {
   render() {
-        return (< CardFinal  images={images} place='kakinada' Spec='Cardiologist'/>)
+        return (< Card  images={images} place='kakinada' Spec='Cardiologist' Name='Wings Medicare '/>)
 
   }
 }

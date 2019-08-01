@@ -12,17 +12,19 @@ import {
 
 import ButtonComponent from '../components/ButtonComponent'
 import DynamicRating from '../components/DynamicRating'
+
 import SignUp from '../screens/SignUp'
 import Login from '../screens/Login'
 import Permissions from '../screens/Permissions'
 import Profile from '../screens/Profile'
+
 
 import StarButton from '../components/StarButton'
 import AvatarButton from '../components/AvatarButton'
 import DurationComponent from '../components/DurationComponent'
 // import SymptomForm from '../components/SymptomForm'
 import Carousel from '../components/Carousal'
-import CardComponent from '../components/CardComponent'
+import CardButton from '../components/CardButton'
 
 const ExampleInfo = {
   DynamicRating: {
@@ -37,7 +39,7 @@ const ExampleInfo = {
     description: 'Custom transitioner with stack router',
     name: 'AvatarButton  ',
   },
-  CardComponent: {
+  CardButton: {
     description: 'A drawer combined with tabs',
     name: 'CardComponent',
   },
@@ -70,21 +72,58 @@ const ExampleInfo = {
     description:
       'Declarative NavigationEvents component to subscribe to navigation events',
     name: 'ButtonComponent',
-  }
+  },
+  HospitalScreen: {
+    description: 'Render additional views around a Tab navigator',
+    name:'HospitalScreen',
+  },
+  FilterScreen: {
+    description: 'Shows the filter elements',
+    name:'FilterScreen',
+  },
+  MultiSelectDropDown: {
+    description: 'To select multiple items from a list',
+    name:'MultiSelect',
+  },
+  TimePicker: {
+    description: 'To select multiple items from a list',
+    name:'TimePicker',
+  },
+  Pagination: {
+    description: 'To select multiple items from a list',
+    name:'Pagination',
+  },
+  Calender: {
+    description: 'To select multiple items from a list',
+    name:'CalenderComponent',
+  },
+  CalenderWithSwipe: {
+    description: 'To select multiple items from a list',
+    name:'CalenderWithSwipe',
+  },
+  AppoinmentScreen: {
+    description: 'To select multiple items from a list',
+    name:'AppoinmentScreen',
+  },
+  MyButton: {
+    description: 'MyButton',
+    name:'MyButton',
+  },
+
 };
 const ExampleRoutes = {
-  DynamicRating,
+    DynamicRating,
   StarButton,
   AvatarButton,
   DurationComponent,
   Carousel,
-  CardComponent,
+  CardButton,
   ButtonComponent,
   SignUp,
   Login,
   Permissions,
-  Profile
-
+  Profile,
+  
 };
 
 
