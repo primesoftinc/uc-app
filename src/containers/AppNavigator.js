@@ -18,6 +18,8 @@ import TimePicker from '../components/TimePicker'
 import CardButton from '../components/CardButton'
 import SignUp from '../screens/SignUp'
 import Login from '../screens/Login'
+import DurationScreen from '../screens/DurationScreen'
+
 import Profile from '../screens/Profile'
 import Permissions from '../screens/Permissions'
 import AppoinmentScreen from '../screens/AppoinmentScreen'
@@ -29,6 +31,7 @@ const AppRoutes = createStackNavigator({
     ButtonComponent,
     SignUp,
     Login,
+    DurationScreen,
     FilterScreen,
     MyButton,
     AppoinmentScreen,

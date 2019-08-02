@@ -14,6 +14,7 @@ import ButtonComponent from '../components/ButtonComponent'
 import DynamicRating from '../components/DynamicRating'
 import FilterScreen from '../screens/FilterScreen';
 import MyButton from '../components/MyButton';
+import DurationScreen from '../screens/DurationScreen';
 
 import SignUp from '../screens/SignUp'
 import Login from '../screens/Login'
@@ -112,6 +113,10 @@ const ExampleInfo = {
     description: 'MyButton',
     name:'MyButton',
   },
+  DurationScreen: {
+    description: 'DurationScreen',
+    name:'DurationScreen',
+  },
 
 };
 const ExampleRoutes = {
@@ -121,6 +126,7 @@ const ExampleRoutes = {
   FilterScreen,
   MyButton,
   AppoinmentScreen,
+  DurationScreen,
     DynamicRating,
   StarButton,
   AvatarButton,
