@@ -1,153 +1,98 @@
-import React from 'react'
-import { Text, View, StyleSheet,ScrollView,Platform, UIManager,Image} from 'react-native';
-import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
-import MyAppointmentCard from './MyAppointmentCard'
-import { Card } from 'react-native-elements';
+import React, { Component } from "react";
+import { Text, View, StyleSheet,Image } from "react-native";
+import {MaterialIcons as Person,Entypo as Address,Foundation as Specialization, 
+  FontAwesome as HopitalImage,
+  FontAwesome as Symptom,AntDesign as Prescription,Ionicons as TimeSlot,MaterialCommunityIcons as Doctor} from '@expo/vector-icons' 
+import { Card } from "native-base";
 
-export default class AppointmentData extends React.Component {
-  constructor() {
-    super();
- 
-    this.state = {
-      doctorTitle: ['Hospital :', 'Address :', 'DoctorName :', 'Specialization :'],
-      doctorData: [
-        ['Apollo Hospitals'],
-        ['Roadno-12,saghal Sreet,Kakinada'],
-        ['Dr.Rajendra Prasad'],
-        ['Neuro surgeon']
-      ],
-      patientTitle: ['PatientName :', 'Slot :', 'Problem :', 'Medication :'],
-      patientData: [
-        ['Abdul'],
-        ['09:30 Am - 10:30 Am'],
-        ['Nreves Weakness'],
-        ['prescription']
-      ]
-    }
-    
-    if (Platform.OS === 'android') {
-      UIManager.setLayoutAnimationEnabledExperimental(true);
-    }
-  }
+export default class AppointmentDetails extends Component {
   render() {
-    const state = this.state;
     return (
-      <ScrollView>
-      <View style={styles.container}>
-        
-        <View style={{flex:1}}>
-          <MyAppointmentCard/>
-          </View>
-       
-          <View style={styles.details}>
-             <View  >
-             <Image
-                style={styles.image}
-                source={require('./assets/Hospital.jpg')}/>
-                 <View  style={{alignItems:'center',paddingTop:5}}>
-                <Text style={styles.textBase}>Hospital Details  </Text>
-                </View>
-                <Card style={styles.hospitalDetails}>
-                <Table borderStyle={{borderColor: 'transparent'}} >
-          <TableWrapper style={styles.wrapper}>
-            <Col data={state.doctorTitle} style={styles.title} heightArr={[30,30,30,30]} textStyle={styles.textBase}/>
-            <Rows data={state.doctorData} flexArr={[2]} style={styles.row} textStyle={styles.textAddress}/>
-          </TableWrapper>
-        </Table>
-                </Card>
-                <View  style={{alignItems:'center',paddingTop:5}}>
-                <Text style={styles.textBase}>Patient Details  </Text>
-                </View>
-                <Card style={styles.patientDetails}>
-                <Table borderStyle={{borderColor: 'transparent'}} >
-          <TableWrapper style={styles.wrapper}>
-            <Col data={state.patientTitle} style={styles.title} heightArr={[30,30,30,30]} textStyle={styles.textBase}/>
-            <Rows data={state.patientData} flexArr={[2]} style={styles.row} textStyle={styles.textAddress}/>
-          </TableWrapper>
-        </Table>
-                </Card>
-             </View>
-          </View> 
-          <View style={{borderWidth:10,borderColor:'white'}}></View>
-            
-    </View>
-    </ScrollView>
+      <View  style={{alignItems:'center',paddingTop:5}}>
+
+      <View style={{padding:20,flex:1,flexDirection:'column'}}>
+        <View style={styles.cardStyle}>
+          <View style={{width:250,height:450}}>
+          <View style={styles.row}>
+        <View style={styles.inputTitleDiff}>
+        <Doctor size={20} name='doctor'color='#6600ff'/> 
+        </View>
+        <View style={styles.inputData}>
+          <Text style={styles.inputDataText}>Dr.Rajendra Prasad</Text> 
+        </View>
+      </View>
+      <View style={styles.row}>
+        <View style={styles.inputTitleDiff}>
+        <Address size={20} name='location-pin'color='#6600ff'/>
+        </View>
+        <View style={styles.inputData}>
+          <Text style={styles.inputDataText}>RoadNo-12,saghal street,kakinada</Text> 
+        </View>
+      </View>
+     
+      <View style={styles.row}>
+        <View style={styles.inputTitle}>
+           <Specialization size={20} name='clipboard-pencil'color='#6600ff'/> 
+        </View>
+        <View style={styles.inputData}>
+          <Text style={styles.inputDataText}>Neuro Surgeon</Text> 
+        </View>
+      </View>
+      <View style={styles.row}>
+        <View style={styles.inputTitle}>
+        <Symptom size={20} name='stethoscope'color='#6600ff'/> 
+        </View>
+        <View style={styles.inputData}>
+          <Text style={styles.inputDataText}>Nerves Weakness</Text> 
+        </View>
+      </View>
+      </View>
+      </View>
+      </View>
+      </View>
+      
     );
   }
 }
- 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection:'column',
-    paddingTop:10,
-    height:800
-   
-  },
-  image:{
-    width:250,
-    height:100,
-    borderRadius:5,
-    alignSelf:'center'
-   },
 
-textBase:{
-    color:'#4e38fe',
-    fontStyle:'normal',
-    fontSize:14,
-    justifyContent:'center'
-},
-textAddress:{
-    color:'#5B5850',
-    fontStyle:'normal',
-    fontSize:13
-},
-details:{
-  flex:2,
-  backgroundColor:'white',
-  paddingTop:10,
-  borderWidth:1,
-  borderColor:'#f2f2f2',
-  borderRadius:5,
-  width:325,
- 
-  alignSelf:'center',
-  shadowColor: "#000",
-  shadowOffset: {
-    width: 3,
-    height: 2,
+const styles = StyleSheet.create({
+  row: {
+    flex: 0.08,
+    flexDirection: "row"
   },
-  shadowOpacity: 0.5,
-  shadowRadius: 3.84,
-  elevation: 5,
- 
-},
-hospitalDetails:{
-  paddingTop:0,
-  borderRadius:5,
-  backgroundColor:'white',
-  shadowColor: "#000",
-  shadowOffset: {
-    width: 3,
-    height: 2,
+  inputData: {
+    alignSelf:'center',
   },
-  shadowOpacity: 0.5,
-  shadowRadius: 3.84,
-  elevation: 5,
-},
-patientDetails:{
-    borderRadius:5,
-    backgroundColor:'white',
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 3,
-      height: 2,
-    },
-    shadowOpacity: 0.5,
-    shadowRadius: 3.84,
-    elevation: 5,
-},
-  wrapper: { flexDirection: 'row' },
-  title: { flex:2 ,height:40,  },
-  row: {  height: 30  }
+  inputTitle: {
+    paddingLeft:5,
+    alignSelf:'center',
+    justifyContent:'center',
+  },
+  inputTitleDiff: {
+    
+    alignSelf:'center',
+    justifyContent:'flex-start',
+  },
+  inputDataText: {
+    justifyContent:'center',
+    fontSize: 14,
+    margin:20,
+    color: "#6a4595"
+  },
+  HeadingText: {
+    justifyContent:'center',
+    fontSize: 14,
+    paddingTop:0,
+    margin:20,
+    color: "#6a4595"
+  },
+  cardStyle:{
+    height:175,
+    width:300,
+    alignContent:'space-between',
+    alignSelf:'stretch',
+    paddingTop:10,
+    paddingLeft:10,
+   
+  }
 });
