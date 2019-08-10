@@ -9,18 +9,18 @@ import DynamicRating from '../components/DynamicRating'
 import StarButton from '../components/StarButton'
 import AvatarButton from '../components/AvatarButton'
 import DurationComponent from '../components/DurationComponent'
-import Pagination from '../components/Pagination';
+
 import Calender from '../components/CalendarComponent';
-import CalenderWithSwipe from '../components/CalenderWithSwipe';
+
 // import SymptomForm from '../components/SymptomForm'
 import Carousel from '../components/Carousal'
-import TimePicker from '../components/TimePicker'
+
 import CardButton from '../components/CardButton'
 import SignUp from '../screens/SignUp'
 import Login from '../screens/Login'
 import DurationScreen from '../screens/DurationScreen'
 
-import Profile from '../screens/Profile'
+
 import Permissions from '../screens/Permissions'
 import AppoinmentScreen from '../screens/AppoinmentScreen'
 import MyButton from '../components/MyButton'
@@ -36,7 +36,6 @@ const AppRoutes = createStackNavigator({
     MyButton,
     AppoinmentScreen,
     Permissions,
-    Profile,
     Calender,
     HospitalScreen,
     MultiSelectDropDown,

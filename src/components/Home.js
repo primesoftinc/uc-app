@@ -19,7 +19,7 @@ import DurationScreen from '../screens/DurationScreen';
 import SignUp from '../screens/SignUp'
 import Login from '../screens/Login'
 import Permissions from '../screens/Permissions'
-import Profile from '../screens/Profile'
+
 import Calender from './CalendarComponent';
 import MultiSelectDropDown from '../components/MultiSelectDropDown';
 import StarButton from '../components/StarButton'
@@ -64,10 +64,7 @@ const ExampleInfo = {
     description:'fd',
     name:'Permissions',
   },
-  Profile:{
-    description:'fd',
-    name:'Profile',
-  },
+ 
   DurationComponent: {
     description: 'Receive the focus prop to know when a screen is focused',
     name: 'DurationComponent',
@@ -89,22 +86,13 @@ const ExampleInfo = {
     description: 'To select multiple items from a list',
     name:'MultiSelect',
   },
-  TimePicker: {
-    description: 'To select multiple items from a list',
-    name:'TimePicker',
-  },
-  Pagination: {
-    description: 'To select multiple items from a list',
-    name:'Pagination',
-  },
+  
+  
   Calender: {
     description: 'To select multiple items from a list',
     name:'CalenderComponent',
   },
-  CalenderWithSwipe: {
-    description: 'To select multiple items from a list',
-    name:'CalenderWithSwipe',
-  },
+  
   AppoinmentScreen: {
     description: 'To select multiple items from a list',
     name:'AppoinmentScreen',
@@ -137,7 +125,7 @@ const ExampleRoutes = {
   SignUp,
   Login,
   Permissions,
-  Profile,
+ 
   
 };
 
