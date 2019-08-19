@@ -19,7 +19,7 @@ import CardButton from '../components/CardButton'
 import SignUp from '../screens/SignUp'
 import Login from '../screens/Login'
 import DurationScreen from '../screens/DurationScreen'
-
+import MyAppointmentCardScreen from '../components/MyAppointmentCardScreen';
 
 import Permissions from '../screens/Permissions'
 import AppoinmentScreen from '../screens/AppoinmentScreen'
@@ -28,6 +28,7 @@ import MyButton from '../components/MyButton'
 import HospitalScreen from '../screens/HospitalsScreen'
 const AppRoutes = createStackNavigator({
     Home: { screen: Home },
+    MyAppointmentCardScreen,
     ButtonComponent,
     SignUp,
     Login,
