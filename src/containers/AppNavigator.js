@@ -9,7 +9,8 @@ import DynamicRating from '../components/DynamicRating'
 import StarButton from '../components/StarButton'
 import AvatarButton from '../components/AvatarButton'
 import DurationComponent from '../components/DurationComponent'
-
+import DemoScreen from '../components/DummyScreen';
+import AppointmentDetailsScreen from'../components/AppointmentDetailsScreen';
 import Calender from '../components/CalendarComponent';
 
 // import SymptomForm from '../components/SymptomForm'
@@ -28,8 +29,10 @@ import MyButton from '../components/MyButton'
 import HospitalScreen from '../screens/HospitalsScreen'
 const AppRoutes = createStackNavigator({
     Home: { screen: Home },
+    AppointmentDetailsScreen,
     MyAppointmentCardScreen,
     ButtonComponent,
+    DemoScreen,
     SignUp,
     Login,
     DurationScreen,

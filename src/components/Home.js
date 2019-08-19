@@ -9,12 +9,13 @@ import {
   createStackNavigator,
   SafeAreaView,
 } from 'react-navigation';
-
+import AppointmentDetailsScreen from'../components/AppointmentDetailsScreen';
 import ButtonComponent from '../components/ButtonComponent'
 import DynamicRating from '../components/DynamicRating'
 import FilterScreen from '../screens/FilterScreen';
 import MyButton from '../components/MyButton';
 import DurationScreen from '../screens/DurationScreen';
+import DemoScreen from './DummyScreen';
 import SignUp from '../screens/SignUp'
 import Login from '../screens/Login'
 import Permissions from '../screens/Permissions'
@@ -30,9 +31,17 @@ import CardButton from '../components/CardButton'
 import HospitalScreen from '../screens/HospitalsScreen'
 import AppoinmentScreen from '../screens/AppoinmentScreen'
 const ExampleInfo = {
+  AppointmentDetailsScreen:{
+    description: 'Render additional views around a Tab navigator',
+    name:'AppointmentDetailsScreen',
+  },
   MyAppointmentCardScreen: {
     description: 'Render additional views around a Tab navigator',
     name:'MyAppointmentCardScreen',
+  },
+  DemoScreen: {
+    description: 'Render additional views around a Tab navigator',
+    name:'DemoScreen',
   },
   DynamicRating: {
     description: 'Render additional views around a Tab navigator',
@@ -111,7 +120,9 @@ const ExampleInfo = {
 
 };
 const ExampleRoutes = {
+  AppointmentDetailsScreen,
   MyAppointmentCardScreen,
+  DemoScreen,
   Calender,
   MultiSelectDropDown,
   HospitalScreen,

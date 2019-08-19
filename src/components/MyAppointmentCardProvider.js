@@ -37,16 +37,16 @@ const GET_Doctor = gql`
 
 
 export default function MyAppointmentCardProvider() {
-  const { loading:l, error:e, data:d } = useQuery(GET_Branch);
-  const { loading, error, data } = useQuery(GET_Doctor);
-  console.log("doctor"+data)
-  console.log("branch"+d)
+  const { loading, error, data } = useQuery(GET_Branch);
+   const { data:d1 } = useQuery(GET_Doctor);
  
+  console.log("branch"+data.getBranch)
+  console.log(d1.getDoctorDetails)
 
   if (loading) return <Text>Loading...</Text>;
   if (error) return <Text>{`Error! ${error.message}`}</Text>;
 else{
-  console.log(data.getBranch.email)
+  console.log(data.getBranch)
   return (
     <View>
     {data.getBranch.map(d=>{

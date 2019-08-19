@@ -6,7 +6,11 @@ import {MaterialIcons as Person,Entypo as Address,Foundation as Specialization,
 import { Card } from "native-base";
 
 export default class AppointmentDetails extends Component {
-  render() {
+  constructor(props){
+    super(props);
+  }
+   render() {  
+    const { doctorName, specialization,address,symptom} = this.props;
     return (
       <View  style={{alignItems:'center',paddingTop:5}}>
 
@@ -18,7 +22,7 @@ export default class AppointmentDetails extends Component {
         <Doctor size={20} name='doctor'color='#6600ff'/> 
         </View>
         <View style={styles.inputData}>
-          <Text style={styles.inputDataText}>Dr.Rajendra Prasad</Text> 
+          <Text style={styles.inputDataText}>{doctorName}</Text> 
         </View>
       </View>
       <View style={styles.row}>
@@ -26,7 +30,7 @@ export default class AppointmentDetails extends Component {
         <Address size={20} name='location-pin'color='#6600ff'/>
         </View>
         <View style={styles.inputData}>
-          <Text style={styles.inputDataText}>RoadNo-12,saghal street,kakinada</Text> 
+          <Text style={styles.inputDataText}>{address}</Text> 
         </View>
       </View>
      
@@ -35,7 +39,7 @@ export default class AppointmentDetails extends Component {
            <Specialization size={20} name='clipboard-pencil'color='#6600ff'/> 
         </View>
         <View style={styles.inputData}>
-          <Text style={styles.inputDataText}>Neuro Surgeon</Text> 
+          <Text style={styles.inputDataText}>{specialization}</Text> 
         </View>
       </View>
       <View style={styles.row}>
@@ -43,7 +47,7 @@ export default class AppointmentDetails extends Component {
         <Symptom size={20} name='stethoscope'color='#6600ff'/> 
         </View>
         <View style={styles.inputData}>
-          <Text style={styles.inputDataText}>Nerves Weakness</Text> 
+          <Text style={styles.inputDataText}>{symptom}</Text> 
         </View>
       </View>
       </View>
